@@ -138,8 +138,6 @@ type RegisterRequest struct {
 	Username       string                 `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
 	Email          string                 `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`
 	Password       string                 `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
-	RepeatPassword string                 `protobuf:"bytes,4,opt,name=repeat_password,json=repeatPassword,proto3" json:"repeat_password,omitempty"`
-	Agreement      bool                   `protobuf:"varint,5,opt,name=agreement,proto3" json:"agreement,omitempty"`
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
@@ -193,20 +191,6 @@ func (x *RegisterRequest) GetPassword() string {
 		return x.Password
 	}
 	return ""
-}
-
-func (x *RegisterRequest) GetRepeatPassword() string {
-	if x != nil {
-		return x.RepeatPassword
-	}
-	return ""
-}
-
-func (x *RegisterRequest) GetAgreement() bool {
-	if x != nil {
-		return x.Agreement
-	}
-	return false
 }
 
 type RegisterResponse struct {

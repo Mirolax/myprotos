@@ -17,15 +17,12 @@ message LoginRequest {
 message LoginResponse {
   string token = 1;
   string email = 2;
-  string username = 3;
 }
 
 message RegisterRequest {
   string username = 1;
   string email = 2;
   string password = 3;
-  string repeat_password = 4;
-  bool agreement = 5;
 }
 
 message RegisterResponse {
